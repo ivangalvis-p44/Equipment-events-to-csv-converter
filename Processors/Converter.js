@@ -47,7 +47,6 @@ const createFile = () => {
 }
 
 const append = (csv, fileExists) => {
-    console.log(csv);
     
     if(fileExists){
         csv = newLine + csv;
