@@ -1,9 +1,9 @@
-### Steps to run in local:
+### Steps to set up and run in local:
 
 1. `npm install`
 2. `npm run devStart`
 
-### **Example of curl to the app:**
+### **Sending the Request: Example of curl:**
 
 `curl --location --request POST 'http://localhost:3000/raven/transform' \
 --header 'Content-Type: application/json' \
@@ -154,3 +154,6 @@
 ]
 }
 ]'`
+
+### **Checking the generated file**
+Go to the directory of the application _'Equipment-events-converter'_ and find the _'csvs'_ folder; there is the generated file. If the file is already generated the API will append a new record to it for each `TripEvent` in the `Equipment` object.

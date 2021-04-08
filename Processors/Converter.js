@@ -1,4 +1,3 @@
-const converter = require('json2csv').parse;
 const FileSystem = require('fs');
 const newLine = '\r\n';
 
@@ -6,7 +5,6 @@ let fields = ['Rail Car', 'Source', 'Event Date', 'Event Code', 'Event Location'
 
 
 const convertToCSV = (equipments) => {
-
 
     FileSystem.stat('./csvs/equipment-raven-trip-events.csv', function (err, stat) {
         if (err) {
@@ -18,7 +16,7 @@ const convertToCSV = (equipments) => {
             } catch (err) {
                 console.log(err);
             }
-
+            console.log('Records appended to the file');
         } else {
             console.log('File exists, appending');
             try {
@@ -27,7 +25,7 @@ const convertToCSV = (equipments) => {
             } catch (err) {
                 console.log(err);
             }
-
+            console.log('Records appended to the file');
         }
     });
 
